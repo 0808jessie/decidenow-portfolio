@@ -94,12 +94,40 @@ export default function ProductGallerySection() {
 
           {/* Other Product Pages Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {productPages.map((page, index) => (
+            {/* Results Display Screenshot */}
+            <div
+              className="group rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 bg-card"
+              style={{
+                animation: `fadeInUp 0.6s ease-out 0.2s both`,
+              }}
+            >
+              <img
+                src="/manus-storage/decidenow-results_3d272a1a.png"
+                alt="DecideNow Results Display"
+                className="w-full h-auto"
+              />
+              <div className="p-6 space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                    <span className="text-sm font-serif font-bold text-primary">3</span>
+                  </div>
+                  <h3 className="text-lg font-serif font-bold text-foreground">
+                    結果展示
+                  </h3>
+                </div>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  AI 生成的決策建議與詳細分析報告
+                </p>
+              </div>
+            </div>
+
+            {/* History Record Placeholder */}
+            {productPages.slice(1).map((page, index) => (
               <div
                 key={page.id}
                 className="group rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 bg-card"
                 style={{
-                  animation: `fadeInUp 0.6s ease-out ${0.2 + index * 0.1}s both`,
+                  animation: `fadeInUp 0.6s ease-out ${0.3 + index * 0.1}s both`,
                 }}
               >
                 {/* Screenshot Placeholder */}
