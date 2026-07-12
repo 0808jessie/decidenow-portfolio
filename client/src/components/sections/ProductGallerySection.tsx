@@ -1,17 +1,11 @@
 /**
  * Product Gallery Section - Product Pages Showcase
- * Design: Full-width homepage + 2x2 grid for other pages
+ * Design: Full-width homepage + grid for other pages
  * Emphasizes: Product design & user interface quality
  */
 
 export default function ProductGallerySection() {
   const productPages = [
-    {
-      id: 2,
-      title: '決策矩陣',
-      description: '四階決策流程的可視化界面，引導用戶逐步分析',
-      label: '決策矩陣頁',
-    },
     {
       id: 3,
       title: '結果展示',
@@ -71,14 +65,41 @@ export default function ProductGallerySection() {
             </div>
           </div>
 
+          {/* Decision Matrix Screenshot */}
+          <div
+            className="group rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 bg-card"
+            style={{
+              animation: `fadeInUp 0.6s ease-out 0.1s both`,
+            }}
+          >
+            <img
+              src="/manus-storage/decidenow-matrix_f48ab5fe.png"
+              alt="DecideNow Decision Matrix"
+              className="w-full h-auto"
+            />
+            <div className="p-6 space-y-3">
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+                  <span className="text-sm font-serif font-bold text-primary">2</span>
+                </div>
+                <h3 className="text-lg font-serif font-bold text-foreground">
+                  決策矩陣
+                </h3>
+              </div>
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                四階決策流程的可視化界面，引導用戶逐步分析
+              </p>
+            </div>
+          </div>
+
           {/* Other Product Pages Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {productPages.map((page, index) => (
               <div
                 key={page.id}
                 className="group rounded-lg overflow-hidden border border-border shadow-sm hover:shadow-md transition-all duration-300 bg-card"
                 style={{
-                  animation: `fadeInUp 0.6s ease-out ${0.1 + index * 0.1}s both`,
+                  animation: `fadeInUp 0.6s ease-out ${0.2 + index * 0.1}s both`,
                 }}
               >
                 {/* Screenshot Placeholder */}
