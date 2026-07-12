@@ -45,7 +45,7 @@ export default function HeroSection() {
             </div>
 
             {/* Tech Stack Tags */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            <div className="flex flex-wrap gap-3 pt-2" style={{paddingRight: '59px', paddingTop: '19px'}}>
               {['React', 'TypeScript', 'TailwindCSS', 'Gemini API', 'Lovable'].map((tech) => (
                 <span
                   key={tech}
@@ -59,7 +59,7 @@ export default function HeroSection() {
 
           {/* Right: Core Tagline */}
           <div className="flex items-start pt-2">
-            <div className="bg-card border border-border rounded-lg p-6 w-full">
+            <div className="bg-card border border-border rounded-lg p-6 w-full" style={{marginTop: '144px'}}>
               <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
                 核心理念
               </p>
