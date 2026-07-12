@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import WorkflowSection from '@/components/sections/WorkflowSection';
 import DevelopmentSection from '@/components/sections/DevelopmentSection';
+import FlowchartSection from '@/components/sections/FlowchartSection';
+import ProductGallerySection from '@/components/sections/ProductGallerySection';
 import TechHighlightsSection from '@/components/sections/TechHighlightsSection';
 import ReflectionSection from '@/components/sections/ReflectionSection';
 
@@ -53,6 +55,12 @@ export default function Home() {
             <a href="#development" className="text-sm hover:text-primary transition-colors">
               開發歷程
             </a>
+            <a href="#flowchart" className="text-sm hover:text-primary transition-colors">
+              流程圖
+            </a>
+            <a href="#gallery" className="text-sm hover:text-primary transition-colors">
+              產品展示
+            </a>
             <a href="#tech" className="text-sm hover:text-primary transition-colors">
               技術亮點
             </a>
@@ -68,6 +76,8 @@ export default function Home() {
         <HeroSection />
         <WorkflowSection />
         <DevelopmentSection />
+        <FlowchartSection />
+        <ProductGallerySection />
         <TechHighlightsSection />
         <ReflectionSection />
       </main>
