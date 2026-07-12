@@ -74,34 +74,27 @@ export default function DevelopmentSection() {
               </div>
 
               {/* Content Card - Bottom */}
-              <div className="flex gap-4 items-start">
-                {/* Timeline Marker - Inline with Title */}
-                <div className="flex-shrink-0 pt-1">
-                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm shadow-sm flex-shrink-0">
+              <div className="card-minimal">
+                <div className="flex items-start gap-3 mb-3">
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-xs shadow-sm flex-shrink-0">
                     {stage.id}
                   </div>
+                  <h3 className="text-lg font-serif font-bold text-foreground">
+                    {stage.title}
+                  </h3>
                 </div>
-
-                {/* Content */}
-                <div className="flex-1">
-                  <div className="card-minimal">
-                    <h3 className="text-lg font-serif font-bold text-foreground mb-2">
-                      {stage.title}
-                    </h3>
-                    <p className="text-sm leading-relaxed text-muted-foreground mb-3">
-                      {stage.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {stage.tools.map((tool) => (
-                        <span
-                          key={tool}
-                          className="px-2 py-1 bg-primary/8 border border-primary/30 rounded-md text-xs font-mono text-primary hover:bg-primary/15 transition-colors"
-                        >
-                          {tool}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+                <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+                  {stage.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {stage.tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-2 py-1 bg-primary/8 border border-primary/30 rounded-md text-xs font-mono text-primary hover:bg-primary/15 transition-colors"
+                    >
+                      {tool}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>

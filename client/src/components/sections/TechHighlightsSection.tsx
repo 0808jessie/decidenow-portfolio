@@ -81,9 +81,7 @@ export default function TechHighlightsSection() {
                     <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                       <span className="text-2xl">{highlight.icon}</span>
                     </div>
-                    <div className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-mono text-primary font-semibold">
-                      {highlight.highlight}
-                    </div>
+
                   </div>
 
                   <h3 className="text-lg font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
@@ -106,37 +104,7 @@ export default function TechHighlightsSection() {
 
 
 
-        {/* Implementation Highlights */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {[
-            {
-              title: '前端優化',
-              items: ['React 19 + TypeScript', 'TailwindCSS 4', 'Framer Motion'],
-            },
-            {
-              title: '品質保障',
-              items: ['嚴格的型別檢查', 'JSON Schema 驗證', '完整的錯誤邊界'],
-            },
-          ].map((section, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent hover:shadow-sm transition-shadow"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${0.8 + index * 0.1}s both`,
-              }}
-            >
-              <h4 className="font-serif font-bold text-foreground mb-4">{section.title}</h4>
-              <ul className="space-y-2">
-                {section.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       <style>{`
