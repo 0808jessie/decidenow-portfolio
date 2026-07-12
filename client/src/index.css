@@ -47,33 +47,33 @@
 
 :root {
   /* Japanese Minimalist Color Palette */
-  --primary: oklch(0.55 0.08 45); /* Warm brown accent */
+  --primary: oklch(0.52 0.12 35); /* Deeper warm brown */
   --primary-foreground: oklch(0.98 0.005 80);
-  --sidebar-primary: oklch(0.55 0.08 45);
+  --sidebar-primary: oklch(0.52 0.12 35);
   --sidebar-primary-foreground: oklch(0.98 0.005 80);
-  --chart-1: oklch(0.55 0.08 45);
+  --chart-1: oklch(0.52 0.12 35);
   --chart-2: oklch(0.50 0.07 50);
   --chart-3: oklch(0.45 0.06 55);
   --chart-4: oklch(0.40 0.05 60);
   --chart-5: oklch(0.35 0.04 65);
   --radius: 0.5rem;
-  --background: oklch(0.98 0.005 80); /* Warm white */
-  --foreground: oklch(0.25 0.02 65); /* Deep gray */
-  --card: oklch(0.96 0.008 85); /* Soft beige */
-  --card-foreground: oklch(0.25 0.02 65);
-  --popover: oklch(0.96 0.008 85);
-  --popover-foreground: oklch(0.25 0.02 65);
-  --secondary: oklch(0.92 0.004 90); /* Light gray */
-  --secondary-foreground: oklch(0.25 0.02 65);
-  --muted: oklch(0.92 0.004 90);
-  --muted-foreground: oklch(0.50 0.01 65);
-  --accent: oklch(0.55 0.08 45); /* Warm brown */
+  --background: oklch(0.995 0.001 70); /* Pure warm white */
+  --foreground: oklch(0.22 0.02 60); /* Darker text */
+  --card: oklch(0.98 0.002 80); /* Subtle warm card */
+  --card-foreground: oklch(0.22 0.02 60);
+  --popover: oklch(0.98 0.002 80);
+  --popover-foreground: oklch(0.22 0.02 60);
+  --secondary: oklch(0.96 0.003 280); /* Cool secondary */
+  --secondary-foreground: oklch(0.35 0.02 60);
+  --muted: oklch(0.94 0.002 75); /* Muted warm */
+  --muted-foreground: oklch(0.55 0.015 65);
+  --accent: oklch(0.92 0.004 45); /* Softer accent */
   --accent-foreground: oklch(0.98 0.005 80);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 90); /* Fine line gray */
+  --border: oklch(0.90 0.003 70); /* Warmer borders */
   --input: oklch(0.96 0.008 85);
-  --ring: oklch(0.55 0.08 45);
+  --ring: oklch(0.52 0.12 35);
   --sidebar: oklch(0.98 0.005 80);
   --sidebar-foreground: oklch(0.25 0.02 65);
   --sidebar-accent: oklch(0.55 0.08 45);

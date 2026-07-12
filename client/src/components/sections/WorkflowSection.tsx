@@ -1,6 +1,6 @@
 /**
  * Workflow Section - Four-Stage AI Decision Process
- * Design: Linear timeline with step cards
+ * Design: Linear timeline with step cards & wavy dashed arrows
  * Emphasizes: Define → Generate → Evaluate → Advise
  */
 
@@ -37,8 +37,12 @@ const workflowSteps = [
 
 export default function WorkflowSection() {
   return (
-    <section id="workflow" className="py-24 bg-background">
-      <div className="container">
+    <section id="workflow" className="py-24 bg-card relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
           <h2 className="section-title">
@@ -50,8 +54,8 @@ export default function WorkflowSection() {
         </div>
 
         {/* Product Screenshot Area */}
-        <div className="mb-16 rounded-lg overflow-hidden border border-border shadow-sm bg-card p-8">
-          <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg flex items-center justify-center">
+        <div className="mb-16 rounded-lg overflow-hidden border border-border shadow-sm bg-background p-8">
+          <div className="aspect-video bg-gradient-to-br from-primary/6 to-primary/10 rounded-lg flex items-center justify-center">
             <div className="text-center space-y-2">
               <p className="text-sm text-muted-foreground">產品首頁截圖</p>
               <p className="text-xs text-muted-foreground">DecideNow 決策系統界面</p>
@@ -60,7 +64,7 @@ export default function WorkflowSection() {
         </div>
 
         {/* Workflow Timeline */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 relative">
           {workflowSteps.map((step, index) => (
             <div
               key={step.id}
@@ -74,13 +78,13 @@ export default function WorkflowSection() {
                 {step.icon}
               </div>
 
-              {/* Connector Line */}
+              {/* Connector Line - Hidden on mobile */}
               {index < workflowSteps.length - 1 && (
                 <div className="hidden lg:block absolute left-1/2 top-20 w-0.5 h-12 bg-gradient-to-b from-primary to-primary/20 -translate-x-1/2" />
               )}
 
               {/* Step Card */}
-              <div className="card-minimal w-full text-center">
+              <div className="card-minimal w-full text-center hover:shadow-md transition-shadow">
                 <h3 className="text-lg font-serif font-bold text-foreground mb-1">
                   {step.title}
                 </h3>
@@ -93,38 +97,134 @@ export default function WorkflowSection() {
               </div>
             </div>
           ))}
+
+          {/* Wavy Dashed Arrows - Desktop Only */}
+          <svg
+            className="hidden lg:block absolute top-0 left-0 w-full h-32 pointer-events-none"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            {/* Arrow 1 → 2 */}
+            <path
+              d="M 200 60 Q 350 20, 500 60"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="8,6"
+              fill="none"
+              className="text-primary/40"
+            />
+            <polygon
+              points="500,60 510,55 505,65"
+              fill="currentColor"
+              className="text-primary/40"
+            />
+
+            {/* Arrow 2 → 3 */}
+            <path
+              d="M 500 60 Q 650 20, 800 60"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="8,6"
+              fill="none"
+              className="text-primary/40"
+            />
+            <polygon
+              points="800,60 810,55 805,65"
+              fill="currentColor"
+              className="text-primary/40"
+            />
+
+            {/* Arrow 3 → 4 */}
+            <path
+              d="M 800 60 Q 950 20, 1100 60"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="8,6"
+              fill="none"
+              className="text-primary/40"
+            />
+            <polygon
+              points="1100,60 1110,55 1105,65"
+              fill="currentColor"
+              className="text-primary/40"
+            />
+          </svg>
         </div>
 
         {/* Workflow Benefits */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {[
             {
               title: '精準定義',
               description: '從模糊直覺到清晰邊界',
+              color: 'from-orange-50 to-amber-50',
+              accent: 'text-orange-700',
             },
             {
               title: '客觀評估',
               description: '跳脫情緒，量化決策因子',
+              color: 'from-slate-50 to-gray-50',
+              accent: 'text-slate-700',
             },
             {
               title: '風險預警',
               description: '發現隱性風險，完成閉環',
+              color: 'from-stone-50 to-yellow-50',
+              accent: 'text-stone-700',
             },
           ].map((benefit, index) => (
             <div
               key={index}
-              className="text-center space-y-3"
+              className={`text-center space-y-3 p-6 rounded-lg bg-gradient-to-br ${benefit.color} border border-primary/10 hover:shadow-sm transition-shadow`}
               style={{
                 animation: `fadeInUp 0.6s ease-out ${0.5 + index * 0.1}s both`,
               }}
             >
-              <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center mx-auto">
-                <span className="text-primary font-serif font-bold">{index + 1}</span>
+              <div className={`w-12 h-12 rounded-full bg-white border-2 border-primary/20 flex items-center justify-center mx-auto ${benefit.accent}`}>
+                <span className="font-serif font-bold">{index + 1}</span>
               </div>
               <h4 className="font-serif font-semibold text-foreground">{benefit.title}</h4>
               <p className="text-sm text-muted-foreground">{benefit.description}</p>
             </div>
           ))}
+
+          {/* Wavy Dashed Arrows Between Benefits - Desktop Only */}
+          <svg
+            className="hidden lg:block absolute top-12 left-0 w-full h-8 pointer-events-none"
+            viewBox="0 0 1200 40"
+            preserveAspectRatio="none"
+            style={{ top: '50%', transform: 'translateY(-50%)' }}
+          >
+            {/* Arrow 1 → 2 */}
+            <path
+              d="M 300 20 Q 450 5, 600 20"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="6,4"
+              fill="none"
+              className="text-primary/30"
+            />
+            <polygon
+              points="600,20 608,16 603,24"
+              fill="currentColor"
+              className="text-primary/30"
+            />
+
+            {/* Arrow 2 → 3 */}
+            <path
+              d="M 600 20 Q 750 5, 900 20"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="6,4"
+              fill="none"
+              className="text-primary/30"
+            />
+            <polygon
+              points="900,20 908,16 903,24"
+              fill="currentColor"
+              className="text-primary/30"
+            />
+          </svg>
         </div>
       </div>
 
