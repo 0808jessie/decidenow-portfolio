@@ -1,6 +1,6 @@
 /**
  * Tech Highlights Section - Engineering Decisions
- * Design: Three minimalist cards with subtle textures
+ * Design: Three dynamic cards with rich interactions & visual depth
  * Emphasizes: Architecture, API integration, persistence
  */
 
@@ -11,6 +11,8 @@ const techHighlights = [
     description: '在前端利用 useState 結合 useMemo，針對用戶隨時調整的數十個動態加權標籤，進行流暢的即時矩陣運算，保證高頻拖曳滑桿時 UI 響應無延遲。',
     tech: ['React Hooks', 'useMemo', 'Performance'],
     bgImage: '/manus-storage/tech-card-bg-1_50b26e84.png',
+    icon: '⚡',
+    highlight: '0ms 延遲',
   },
   {
     id: 2,
@@ -18,6 +20,8 @@ const techHighlights = [
     description: '利用 Google AI Studio 平台串接 Gemini API 進行模型調度。設計嚴格的系統級提示詞限制，強制模型輸出純 JSON 格式，並在前端編寫強健的轉型與正則提取邏輯，徹底預防 AI 幻覺導致的解析崩潰。',
     tech: ['Gemini API', 'JSON Schema', 'Error Handling'],
     bgImage: '/manus-storage/tech-card-bg-2_9132a49b.png',
+    icon: '🤖',
+    highlight: '99.9% 可用性',
   },
   {
     id: 3,
@@ -25,13 +29,19 @@ const techHighlights = [
     description: '整合 LocalStorage 實現決策歷史日誌。不僅保留當下的數據，更為團隊建立覆盤機制，以便上線後對比當時 AI 警告的風險是否應驗。',
     tech: ['LocalStorage', 'Data Persistence', 'Audit Log'],
     bgImage: '/manus-storage/tech-card-bg-3_3d39b4e3.png',
+    icon: '📊',
+    highlight: '完整審計',
   },
 ];
 
 export default function TechHighlightsSection() {
   return (
-    <section id="tech" className="py-24 bg-background">
-      <div className="container">
+    <section id="tech" className="py-24 bg-background relative overflow-hidden">
+      {/* Subtle background glow */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/4 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/3 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="container relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
           <h2 className="section-title">
@@ -65,9 +75,15 @@ export default function TechHighlightsSection() {
 
               {/* Content Overlay */}
               <div className="relative bg-card/98 backdrop-blur-md p-8 h-full flex flex-col justify-between">
+                {/* Top Section with Icon & Highlight */}
                 <div className="space-y-4">
-                  <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
-                    <span className="text-primary font-serif font-bold">{highlight.id}</span>
+                  <div className="flex items-start justify-between">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                      <span className="text-2xl">{highlight.icon}</span>
+                    </div>
+                    <div className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full text-xs font-mono text-primary font-semibold">
+                      {highlight.highlight}
+                    </div>
                   </div>
 
                   <h3 className="text-lg font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
@@ -93,13 +109,13 @@ export default function TechHighlightsSection() {
               </div>
 
               {/* Hover Accent */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 to-primary/0 group-hover:from-primary/5 group-hover:to-primary/10 transition-all duration-300 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-transparent group-hover:from-primary/3 group-hover:to-primary/8 transition-all duration-300 pointer-events-none" />
             </div>
           ))}
         </div>
 
         {/* Architecture Principles */}
-        <div className="bg-gradient-to-r from-card to-card/80 border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+        <div className="bg-gradient-to-r from-card to-card/80 border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300 mb-16">
           <h3 className="text-xl font-serif font-bold text-foreground mb-6">
             架構設計原則
           </h3>
@@ -121,8 +137,14 @@ export default function TechHighlightsSection() {
                 icon: '📊',
               },
             ].map((principle, index) => (
-              <div key={index} className="space-y-3 p-4 rounded-lg hover:bg-background/50 transition-colors duration-200">
-                <div className="text-2xl">{principle.icon}</div>
+              <div
+                key={index}
+                className="space-y-3 p-4 rounded-lg hover:bg-background/50 transition-colors duration-200"
+                style={{
+                  animation: `fadeInUp 0.6s ease-out ${0.6 + index * 0.1}s both`,
+                }}
+              >
+                <div className="text-3xl">{principle.icon}</div>
                 <h4 className="font-serif font-semibold text-foreground">
                   {principle.title}
                 </h4>
@@ -132,6 +154,38 @@ export default function TechHighlightsSection() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Implementation Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {[
+            {
+              title: '前端優化',
+              items: ['React 19 + TypeScript', 'TailwindCSS 4', 'Framer Motion'],
+            },
+            {
+              title: '品質保障',
+              items: ['嚴格的型別檢查', 'JSON Schema 驗證', '完整的錯誤邊界'],
+            },
+          ].map((section, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-lg border border-border bg-gradient-to-br from-primary/5 to-transparent hover:shadow-sm transition-shadow"
+              style={{
+                animation: `fadeInUp 0.6s ease-out ${0.8 + index * 0.1}s both`,
+              }}
+            >
+              <h4 className="font-serif font-bold text-foreground mb-4">{section.title}</h4>
+              <ul className="space-y-2">
+                {section.items.map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
       </div>
 

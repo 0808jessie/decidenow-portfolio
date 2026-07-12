@@ -1,6 +1,6 @@
 /**
  * Development Section - Vibe Coding Workflow
- * Design: Vertical layout with screenshots on top, content below
+ * Design: 2x2 grid layout with screenshots on top, content below
  * Emphasizes: Modern development paradigm & tool orchestration
  */
 
@@ -53,8 +53,8 @@ export default function DevelopmentSection() {
           </p>
         </div>
 
-        {/* Development Timeline - Vertical Layout */}
-        <div className="space-y-16">
+        {/* Development Timeline - 2x2 Grid Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
           {developmentStages.map((stage, index) => (
             <div
               key={stage.id}
@@ -74,31 +74,28 @@ export default function DevelopmentSection() {
               </div>
 
               {/* Content Card - Bottom */}
-              <div className="flex gap-6 items-start">
+              <div className="flex gap-4 items-start">
                 {/* Timeline Marker */}
-                <div className="flex flex-col items-center gap-4 flex-shrink-0 pt-2">
-                  <div className="w-12 h-12 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg shadow-sm">
+                <div className="flex flex-col items-center gap-3 flex-shrink-0 pt-2">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm shadow-sm">
                     {stage.id}
                   </div>
-                  {index < developmentStages.length - 1 && (
-                    <div className="w-1 h-20 bg-gradient-to-b from-primary to-primary/30" />
-                  )}
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pt-2">
+                <div className="flex-1 pt-1">
                   <div className="card-minimal">
-                    <h3 className="text-xl font-serif font-bold text-foreground mb-3">
+                    <h3 className="text-lg font-serif font-bold text-foreground mb-2">
                       {stage.title}
                     </h3>
-                    <p className="text-base leading-relaxed text-muted-foreground mb-4">
+                    <p className="text-sm leading-relaxed text-muted-foreground mb-3">
                       {stage.description}
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {stage.tools.map((tool) => (
                         <span
                           key={tool}
-                          className="px-3 py-1 bg-primary/8 border border-primary/30 rounded-md text-xs font-mono text-primary hover:bg-primary/15 transition-colors"
+                          className="px-2 py-1 bg-primary/8 border border-primary/30 rounded-md text-xs font-mono text-primary hover:bg-primary/15 transition-colors"
                         >
                           {tool}
                         </span>
@@ -112,7 +109,7 @@ export default function DevelopmentSection() {
         </div>
 
         {/* Key Principle */}
-        <div className="mt-20 bg-gradient-to-r from-primary/5 to-primary/8 border border-primary/20 rounded-lg p-8">
+        <div className="bg-gradient-to-r from-primary/5 to-primary/8 border border-primary/20 rounded-lg p-8 mb-16">
           <p className="text-center text-lg font-serif font-semibold text-foreground leading-relaxed">
             「將精力專注於系統架構與邏輯拆解，把編碼細節與邊界除錯交給 AI」
           </p>
@@ -122,7 +119,7 @@ export default function DevelopmentSection() {
         </div>
 
         {/* Tool Orchestration Benefits */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
             {
               title: '快速驗證',

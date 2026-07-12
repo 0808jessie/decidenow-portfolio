@@ -97,58 +97,6 @@ export default function WorkflowSection() {
               </div>
             </div>
           ))}
-
-          {/* Wavy Dashed Arrows - Desktop Only */}
-          <svg
-            className="hidden lg:block absolute top-0 left-0 w-full h-32 pointer-events-none"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            {/* Arrow 1 → 2 */}
-            <path
-              d="M 200 60 Q 350 20, 500 60"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeDasharray="8,6"
-              fill="none"
-              className="text-primary/40"
-            />
-            <polygon
-              points="500,60 510,55 505,65"
-              fill="currentColor"
-              className="text-primary/40"
-            />
-
-            {/* Arrow 2 → 3 */}
-            <path
-              d="M 500 60 Q 650 20, 800 60"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeDasharray="8,6"
-              fill="none"
-              className="text-primary/40"
-            />
-            <polygon
-              points="800,60 810,55 805,65"
-              fill="currentColor"
-              className="text-primary/40"
-            />
-
-            {/* Arrow 3 → 4 */}
-            <path
-              d="M 800 60 Q 950 20, 1100 60"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeDasharray="8,6"
-              fill="none"
-              className="text-primary/40"
-            />
-            <polygon
-              points="1100,60 1110,55 1105,65"
-              fill="currentColor"
-              className="text-primary/40"
-            />
-          </svg>
         </div>
 
         {/* Workflow Benefits */}
@@ -190,14 +138,13 @@ export default function WorkflowSection() {
 
           {/* Wavy Dashed Arrows Between Benefits - Desktop Only */}
           <svg
-            className="hidden lg:block absolute top-12 left-0 w-full h-8 pointer-events-none"
-            viewBox="0 0 1200 40"
+            className="hidden lg:block absolute top-1/2 left-0 w-full h-16 pointer-events-none -translate-y-1/2"
+            viewBox="0 0 1200 60"
             preserveAspectRatio="none"
-            style={{ top: '50%', transform: 'translateY(-50%)' }}
           >
             {/* Arrow 1 → 2 */}
             <path
-              d="M 300 20 Q 450 5, 600 20"
+              d="M 280 30 Q 420 10, 560 30"
               stroke="currentColor"
               strokeWidth="2"
               strokeDasharray="6,4"
@@ -205,14 +152,14 @@ export default function WorkflowSection() {
               className="text-primary/30"
             />
             <polygon
-              points="600,20 608,16 603,24"
+              points="560,30 568,26 563,34"
               fill="currentColor"
               className="text-primary/30"
             />
 
             {/* Arrow 2 → 3 */}
             <path
-              d="M 600 20 Q 750 5, 900 20"
+              d="M 640 30 Q 780 10, 920 30"
               stroke="currentColor"
               strokeWidth="2"
               strokeDasharray="6,4"
@@ -220,7 +167,7 @@ export default function WorkflowSection() {
               className="text-primary/30"
             />
             <polygon
-              points="900,20 908,16 903,24"
+              points="920,30 928,26 923,34"
               fill="currentColor"
               className="text-primary/30"
             />
