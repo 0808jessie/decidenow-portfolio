@@ -75,15 +75,15 @@ export default function DevelopmentSection() {
 
               {/* Content Card - Bottom */}
               <div className="flex gap-4 items-start">
-                {/* Timeline Marker */}
-                <div className="flex flex-col items-center gap-3 flex-shrink-0 pt-2">
-                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm shadow-sm">
+                {/* Timeline Marker - Inline with Title */}
+                <div className="flex-shrink-0 pt-1">
+                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-sm shadow-sm flex-shrink-0">
                     {stage.id}
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="flex-1 pt-1">
+                <div className="flex-1">
                   <div className="card-minimal">
                     <h3 className="text-lg font-serif font-bold text-foreground mb-2">
                       {stage.title}

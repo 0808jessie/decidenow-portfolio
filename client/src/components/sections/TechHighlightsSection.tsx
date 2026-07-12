@@ -95,17 +95,7 @@ export default function TechHighlightsSection() {
                   </p>
                 </div>
 
-                {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-border/50">
-                  {highlight.tech.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 bg-primary/10 border border-primary/30 rounded text-xs font-mono text-primary hover:bg-primary/20 transition-colors duration-200"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+
               </div>
 
               {/* Hover Accent */}
@@ -114,47 +104,7 @@ export default function TechHighlightsSection() {
           ))}
         </div>
 
-        {/* Architecture Principles */}
-        <div className="bg-gradient-to-r from-card to-card/80 border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300 mb-16">
-          <h3 className="text-xl font-serif font-bold text-foreground mb-6">
-            架構設計原則
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: '性能優先',
-                description: '即時運算與流暢 UI 響應是核心',
-                icon: '⚡',
-              },
-              {
-                title: '可靠性保障',
-                description: '嚴格的錯誤處理與 AI 幻覺預防',
-                icon: '🛡️',
-              },
-              {
-                title: '數據完整性',
-                description: '持久化存儲與完整的審計日誌',
-                icon: '📊',
-              },
-            ].map((principle, index) => (
-              <div
-                key={index}
-                className="space-y-3 p-4 rounded-lg hover:bg-background/50 transition-colors duration-200"
-                style={{
-                  animation: `fadeInUp 0.6s ease-out ${0.6 + index * 0.1}s both`,
-                }}
-              >
-                <div className="text-3xl">{principle.icon}</div>
-                <h4 className="font-serif font-semibold text-foreground">
-                  {principle.title}
-                </h4>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {principle.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
         {/* Implementation Highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

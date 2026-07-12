@@ -82,7 +82,7 @@ export default function ReflectionSection() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="text-4xl flex-shrink-0">{reflection.icon}</div>
-                  <h3 className="text-xl font-serif font-bold text-foreground">
+                  <h3 className="text-xl font-serif font-bold text-foreground" style={{paddingTop: '10px'}}>
                     {reflection.title}
                   </h3>
                 </div>
@@ -105,7 +105,7 @@ export default function ReflectionSection() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="text-4xl flex-shrink-0">{reflection.icon}</div>
-                  <h3 className="text-xl font-serif font-bold text-foreground">
+                  <h3 className="text-xl font-serif font-bold text-foreground" style={{paddingTop: '10px'}}>
                     {reflection.title}
                   </h3>
                 </div>
