@@ -63,37 +63,7 @@ export default function FlowchartSection() {
           ))}
         </div>
 
-        {/* Key Components */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {[
-            {
-              title: '前端決策面板',
-              items: ['首頁債測提示 (Reviewer)', '行動替代方案 (Plan B)', 'ICE 綜合分數評估'],
-            },
-            {
-              title: '本地管理系統',
-              items: ['LocalStorage 持久化', '歷史日誌覆盤', '用戶滿意度回饋'],
-            },
-          ].map((section, index) => (
-            <div
-              key={index}
-              className="p-6 rounded-lg bg-gradient-to-br from-primary/5 to-transparent border border-border"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${0.8 + index * 0.1}s both`,
-              }}
-            >
-              <h4 className="font-serif font-bold text-foreground mb-4">{section.title}</h4>
-              <ul className="space-y-2">
-                {section.items.map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       <style>{`

@@ -17,9 +17,9 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="container relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center py-20">
-        {/* Left: Brand & Core Message */}
-        <div className="flex flex-col justify-center space-y-8">
+      <div className="container relative z-10 py-20">
+        {/* Brand & Core Message */}
+        <div className="flex flex-col justify-center space-y-8 max-w-3xl">
           <div className="space-y-4">
             <img
               src="/manus-storage/decidenow-logo_bf3e599f.png"
@@ -66,28 +66,7 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right: Product Screenshot Area */}
-        <div className="hidden md:flex items-center justify-center">
-          <div className="relative w-full max-w-md group">
-            {/* Product Screenshot Frame */}
-            <div className="bg-card border border-border rounded-lg p-8 shadow-sm group-hover:shadow-md transition-shadow duration-300">
-              <div className="aspect-square bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg flex items-center justify-center">
-                <div className="text-center space-y-4">
-                  <p className="text-sm text-muted-foreground font-medium">
-                    產品首頁截圖
-                  </p>
-                  <p className="text-xs text-muted-foreground">
-                    DecideNow 決策系統界面
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            {/* Decorative annotation */}
-            <div className="absolute -top-4 -right-4 w-32 h-32 border-2 border-primary/20 rounded-full pointer-events-none group-hover:border-primary/40 transition-colors duration-300" />
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 border-2 border-primary/10 rounded-full pointer-events-none group-hover:border-primary/30 transition-colors duration-300" />
-          </div>
-        </div>
       </div>
 
       {/* Scroll indicator */}
