@@ -118,9 +118,14 @@ export default function ReflectionSection() {
           <p className="text-lg leading-relaxed max-w-2xl mx-auto">
             DecideNow 不只是一個工具，而是一個設計 AI 參與人類決策的完整框架。無論您是在做個人決策、團隊協作，還是企業戰略規劃，這套系統都能幫助您從模糊直覺轉化為科學量化的決策過程。
           </p>
-          <button className="inline-block px-8 py-4 bg-primary-foreground text-primary font-serif font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 active:scale-95">
+          <a
+            href="https://0808jessie.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-4 bg-primary-foreground text-primary font-serif font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 active:scale-95 hover:no-underline"
+          >
             開始探索
-          </button>
+          </a>
         </div>
 
         {/* Final Message */}

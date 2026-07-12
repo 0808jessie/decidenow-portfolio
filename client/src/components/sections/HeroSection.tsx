@@ -1,7 +1,7 @@
 /**
  * Hero Section - Project Overview
  * Design: Japanese Minimalism with warm beige background
- * Layout: Asymmetric - left brand identity, right content
+ * Layout: Asymmetric - left brand identity, right product screenshot
  */
 
 export default function HeroSection() {
@@ -43,7 +43,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Core Tagline */}
+          {/* Core Tagline - Repositioned */}
           <div className="bg-card border border-border rounded-lg p-6 mt-8">
             <p className="text-sm text-muted-foreground uppercase tracking-wide mb-2">
               核心理念
@@ -66,19 +66,18 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Right: Visual Element */}
+        {/* Right: Product Screenshot Area */}
         <div className="hidden md:flex items-center justify-center">
           <div className="relative w-full max-w-md group">
-            {/* Decorative frame */}
+            {/* Product Screenshot Frame */}
             <div className="bg-card border border-border rounded-lg p-8 shadow-sm group-hover:shadow-md transition-shadow duration-300">
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-primary/5 rounded-lg flex items-center justify-center">
+              <div className="aspect-square bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg flex items-center justify-center">
                 <div className="text-center space-y-4">
-                  <div className="text-5xl font-serif font-bold text-primary">✓</div>
                   <p className="text-sm text-muted-foreground font-medium">
-                    一句話定義複雜命題
+                    產品首頁截圖
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    AI 引導式決策系統
+                    DecideNow 決策系統界面
                   </p>
                 </div>
               </div>

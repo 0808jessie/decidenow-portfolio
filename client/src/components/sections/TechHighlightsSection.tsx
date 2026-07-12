@@ -43,7 +43,7 @@ export default function TechHighlightsSection() {
         </div>
 
         {/* Tech Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {techHighlights.map((highlight, index) => (
             <div
               key={highlight.id}
@@ -52,24 +52,25 @@ export default function TechHighlightsSection() {
                 animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
               }}
             >
-              {/* Background Texture */}
+              {/* Background Texture with Overlay */}
               <div
-                className="absolute inset-0 opacity-50"
+                className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-300"
                 style={{
                   backgroundImage: `url(${highlight.bgImage})`,
                   backgroundSize: 'cover',
                   backgroundPosition: 'center',
                 }}
               />
+              <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-primary/5 group-hover:to-primary/10 transition-all duration-300" />
 
               {/* Content Overlay */}
-              <div className="relative bg-card/95 backdrop-blur-sm p-8 h-full flex flex-col justify-between">
+              <div className="relative bg-card/98 backdrop-blur-md p-8 h-full flex flex-col justify-between">
                 <div className="space-y-4">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
                     <span className="text-primary font-serif font-bold">{highlight.id}</span>
                   </div>
 
-                  <h3 className="text-lg font-serif font-bold text-foreground leading-tight">
+                  <h3 className="text-lg font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
                     {highlight.title}
                   </h3>
 
@@ -83,7 +84,7 @@ export default function TechHighlightsSection() {
                   {highlight.tech.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-primary/5 border border-primary/20 rounded text-xs font-mono text-primary"
+                      className="px-2 py-1 bg-primary/10 border border-primary/30 rounded text-xs font-mono text-primary hover:bg-primary/20 transition-colors duration-200"
                     >
                       {tech}
                     </span>
@@ -98,7 +99,7 @@ export default function TechHighlightsSection() {
         </div>
 
         {/* Architecture Principles */}
-        <div className="mt-20 bg-card border border-border rounded-lg p-8">
+        <div className="bg-gradient-to-r from-card to-card/80 border border-border rounded-lg p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
           <h3 className="text-xl font-serif font-bold text-foreground mb-6">
             架構設計原則
           </h3>
@@ -107,17 +108,21 @@ export default function TechHighlightsSection() {
               {
                 title: '性能優先',
                 description: '即時運算與流暢 UI 響應是核心',
+                icon: '⚡',
               },
               {
                 title: '可靠性保障',
                 description: '嚴格的錯誤處理與 AI 幻覺預防',
+                icon: '🛡️',
               },
               {
                 title: '數據完整性',
                 description: '持久化存儲與完整的審計日誌',
+                icon: '📊',
               },
             ].map((principle, index) => (
-              <div key={index} className="space-y-3">
+              <div key={index} className="space-y-3 p-4 rounded-lg hover:bg-background/50 transition-colors duration-200">
+                <div className="text-2xl">{principle.icon}</div>
                 <h4 className="font-serif font-semibold text-foreground">
                   {principle.title}
                 </h4>

@@ -49,6 +49,16 @@ export default function WorkflowSection() {
           </p>
         </div>
 
+        {/* Product Screenshot Area */}
+        <div className="mb-16 rounded-lg overflow-hidden border border-border shadow-sm bg-card p-8">
+          <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg flex items-center justify-center">
+            <div className="text-center space-y-2">
+              <p className="text-sm text-muted-foreground">產品首頁截圖</p>
+              <p className="text-xs text-muted-foreground">DecideNow 決策系統界面</p>
+            </div>
+          </div>
+        </div>
+
         {/* Workflow Timeline */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {workflowSteps.map((step, index) => (

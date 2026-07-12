@@ -1,6 +1,6 @@
 /**
  * Development Section - Vibe Coding Workflow
- * Design: Linear timeline with development stages
+ * Design: Linear timeline with development stages & tool screenshots
  * Emphasizes: Modern development paradigm & tool orchestration
  */
 
@@ -10,24 +10,28 @@ const developmentStages = [
     title: 'Lovable 原型設計',
     description: '在開發初期，完全使用 Lovable 平台，以自然語言快速提煉並驗證初版的 UI/UX 畫面與基礎動態。',
     tools: ['Lovable', 'Natural Language'],
+    screenshotLabel: 'Lovable 平台界面',
   },
   {
     id: 2,
     title: 'GitHub 雙向鏈接',
     description: '原型確認後，直接將 Lovable 專案連接至 GitHub 儲存庫，並克隆至本機端開發環境。',
     tools: ['GitHub', 'Git Clone'],
+    screenshotLabel: 'GitHub 儲存庫',
   },
   {
     id: 3,
     title: 'VS Code Vibe Coding',
     description: '在本機端使用 VS Code 實踐 Vibe Coding 的最高指導原則——將精力專注於系統架構與邏輯拆解，把編碼細節交給 AI。',
     tools: ['VS Code', 'Vibe Coding'],
+    screenshotLabel: 'VS Code 開發環境',
   },
   {
     id: 4,
     title: '雙模型協作',
     description: '在遇到複雜邏輯或排版異常時，動態調度 Gemini 與 Claude 3.5 雙模型進行品質把關。',
     tools: ['Gemini', 'Claude 3.5'],
+    screenshotLabel: '模型協作流程',
   },
 ];
 
@@ -45,44 +49,59 @@ export default function DevelopmentSection() {
           </p>
         </div>
 
-        {/* Development Timeline */}
-        <div className="space-y-8">
+        {/* Development Timeline with Screenshots */}
+        <div className="space-y-12">
           {developmentStages.map((stage, index) => (
             <div
               key={stage.id}
-              className="flex gap-8 items-start"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start"
               style={{
                 animation: `slideInLeft 0.6s ease-out ${index * 0.1}s both`,
               }}
             >
-              {/* Timeline Marker */}
-              <div className="flex flex-col items-center gap-4 flex-shrink-0">
-                <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg shadow-sm">
-                  {stage.id}
+              {/* Left: Timeline Content */}
+              <div className="flex gap-8">
+                {/* Timeline Marker */}
+                <div className="flex flex-col items-center gap-4 flex-shrink-0">
+                  <div className="w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg shadow-sm">
+                    {stage.id}
+                  </div>
+                  {index < developmentStages.length - 1 && (
+                    <div className="w-1 h-24 bg-gradient-to-b from-primary to-primary/30" />
+                  )}
                 </div>
-                {index < developmentStages.length - 1 && (
-                  <div className="w-1 h-16 bg-gradient-to-b from-primary to-primary/30" />
-                )}
+
+                {/* Content Card */}
+                <div className="flex-1 pt-2">
+                  <div className="card-minimal">
+                    <h3 className="text-xl font-serif font-bold text-foreground mb-3">
+                      {stage.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-muted-foreground mb-4">
+                      {stage.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {stage.tools.map((tool) => (
+                        <span
+                          key={tool}
+                          className="px-3 py-1 bg-background border border-border rounded-md text-xs font-mono text-foreground"
+                        >
+                          {tool}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              {/* Content Card */}
-              <div className="flex-1 pt-2">
-                <div className="card-minimal">
-                  <h3 className="text-xl font-serif font-bold text-foreground mb-3">
-                    {stage.title}
-                  </h3>
-                  <p className="text-base leading-relaxed text-muted-foreground mb-4">
-                    {stage.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {stage.tools.map((tool) => (
-                      <span
-                        key={tool}
-                        className="px-3 py-1 bg-background border border-border rounded-md text-xs font-mono text-foreground"
-                      >
-                        {tool}
-                      </span>
-                    ))}
+              {/* Right: Screenshot Area */}
+              <div className="hidden lg:block">
+                <div className="rounded-lg overflow-hidden border border-border shadow-sm bg-background p-6">
+                  <div className="aspect-video bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg flex items-center justify-center">
+                    <div className="text-center space-y-2">
+                      <p className="text-sm text-muted-foreground">{stage.screenshotLabel}</p>
+                      <p className="text-xs text-muted-foreground">工具截圖展示</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -91,7 +110,7 @@ export default function DevelopmentSection() {
         </div>
 
         {/* Key Principle */}
-        <div className="mt-16 bg-background border-2 border-primary/20 rounded-lg p-8">
+        <div className="mt-20 bg-background border-2 border-primary/20 rounded-lg p-8">
           <p className="text-center text-lg font-serif font-semibold text-foreground leading-relaxed">
             「將精力專注於系統架構與邏輯拆解，把編碼細節與邊界除錯交給 AI」
           </p>
