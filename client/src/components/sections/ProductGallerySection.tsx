@@ -71,8 +71,8 @@ export default function ProductGallerySection() {
                 />
               ) : (
                 // Placeholder
-                <div className="aspect-video bg-gradient-to-br from-primary/8 to-primary/12 flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="aspect-video bg-gradient-to-br from-primary/8 to-primary/12 flex items-center justify-center relative overflow-hidden" style={{height: '324px', width: '719px'}}>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{height: '324px', width: '718px'}} />
                   <div className="text-center space-y-2 relative z-10">
                     <p className="text-sm font-medium text-muted-foreground">{page.title}頁面</p>
                     <p className="text-xs text-muted-foreground">產品頁面截圖</p>
@@ -100,10 +100,10 @@ export default function ProductGallerySection() {
 
         {/* Gallery Info */}
         <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/8 border border-primary/20 rounded-lg text-center space-y-3">
-          <p className="text-sm font-medium text-foreground">
+          <p className="text-sm font-medium text-foreground" style={{fontSize: '18px', fontWeight: '600'}}>
             完整的用戶旅程
           </p>
-          <p className="text-xs text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xs text-muted-foreground max-w-2xl mx-auto" style={{fontSize: '16px'}}>
             從初次接觸到決策完成，DecideNow 提供直觀的界面設計與流暢的用戶體驗，讓複雜的決策過程變得簡單易懂。
           </p>
         </div>

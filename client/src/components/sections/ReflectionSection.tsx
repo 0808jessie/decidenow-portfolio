@@ -81,7 +81,7 @@ export default function ReflectionSection() {
                 }}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl font-bold flex-shrink-0 text-primary">{reflection.icon}</div>
+                  <div className="text-4xl font-bold flex-shrink-0 text-primary" style={{fontSize: '30px'}}>{reflection.icon}</div>
                   <h3 className="text-xl font-serif font-bold text-foreground pt-2">
                     {reflection.title}
                   </h3>
@@ -104,7 +104,7 @@ export default function ReflectionSection() {
                 }}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl font-bold flex-shrink-0 text-primary">{reflection.icon}</div>
+                  <div className="text-4xl font-bold flex-shrink-0 text-primary" style={{fontSize: '30px'}}>{reflection.icon}</div>
                   <h3 className="text-xl font-serif font-bold text-foreground pt-2">
                     {reflection.title}
                   </h3>
@@ -131,10 +131,10 @@ export default function ReflectionSection() {
                   animation: `fadeInUp 0.6s ease-out ${0.6 + index * 0.1}s both`,
                 }}
               >
-                <h4 className="font-serif font-bold text-foreground text-sm mb-2">
+                <h4 className="font-serif font-bold text-foreground text-sm mb-2" style={{fontSize: '18px'}}>
                   {insight.title}
                 </h4>
-                <p className="text-xs leading-relaxed text-muted-foreground">
+                <p className="text-xs leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                   {insight.description}
                 </p>
               </div>

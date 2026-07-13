@@ -45,10 +45,10 @@ export default function WorkflowSection() {
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="max-w-2xl mb-16">
-          <h2 className="section-title">
+          <h2 className="section-title" style={{textAlign: 'center', width: '1463px'}}>
             突破傳統問答
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle" style={{textAlign: 'center', width: '1463px'}}>
             設計 AI 參與人類決策的四階工作流
           </p>
         </div>
