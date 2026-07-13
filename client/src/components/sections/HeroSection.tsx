@@ -71,10 +71,10 @@ export default function HeroSection() {
 
             <div className="space-y-4 max-w-lg">
               <p className="text-lg leading-relaxed text-foreground">
-                設計 AI 參與人類決策的工作流
+                設計 AI 參與人類決策的工作流－從模糊直覺到步驟化科學量化
               </p>
               <p className="text-base leading-relaxed text-muted-foreground">
-                從模糊直覺到步驟化科學量化
+                
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ export default function HeroSection() {
           <div className="flex items-start pt-16">
             <div className="w-full space-y-6">
               {/* Core Tagline - Aligned with left subtitle */}
-              <div className="bg-card border border-border rounded-lg p-6 w-full hover:shadow-md transition-shadow duration-300">
+              <div className="bg-card border border-border rounded-lg p-6 w-full hover:shadow-md transition-shadow duration-300" style={{marginTop: '42px', marginBottom: '39px'}}>
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
                   核心理念
                 </p>

@@ -86,7 +86,7 @@ export default function ReflectionSection() {
                     {reflection.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-sm leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                   {reflection.description}
                 </p>
               </div>
@@ -109,7 +109,7 @@ export default function ReflectionSection() {
                     {reflection.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-sm leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                   {reflection.description}
                 </p>
               </div>
