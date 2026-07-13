@@ -56,8 +56,10 @@ export default function FlowchartSection() {
                 animation: `fadeInUp 0.6s ease-out ${0.6 + index * 0.1}s both`,
               }}
             >
-              <div className="text-3xl mb-3">{item.icon}</div>
-              <h4 className="font-serif font-bold text-foreground mb-2">{item.title}</h4>
+              <div className="flex items-center gap-3 mb-3">
+                <div className="text-2xl flex-shrink-0">{item.icon}</div>
+                <h4 className="font-serif font-bold text-foreground">{item.title}</h4>
+              </div>
               <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
             </div>
           ))}

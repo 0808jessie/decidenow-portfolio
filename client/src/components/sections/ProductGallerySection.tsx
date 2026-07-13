@@ -7,7 +7,7 @@
 export default function ProductGallerySection() {
   const productPages = [
     {
-      id: '首',
+      id: '1',
       title: '首頁',
       description: '決策系統的入口，展示核心功能與價值主張。用戶可在此輸入決策問題，系統將引導完成四階決策流程。',
       image: '/manus-storage/decidenow-homepage_c5a73155.png',
@@ -15,22 +15,22 @@ export default function ProductGallerySection() {
     },
     {
       id: '2',
-      title: '決策矩陣',
-      description: '四階決策流程的可視化界面，引導用戶逐步分析',
+      title: '指標加權與標籤池',
+      description: '系統透過 useState 管理即時狀態，將 AI 提取的利弊標籤與手動因子轉化為加權滑桿，讓使用者能直覺校準不同維度對最終決策的影響力。',
       image: '/manus-storage/decidenow-matrix_f48ab5fe.png',
       alt: 'DecideNow Decision Matrix',
     },
     {
       id: '3',
-      title: '結果展示',
-      description: 'AI 生成的決策建議與詳細分析報告',
+      title: 'AI 決策反饋面板',
+      description: '核心引擎調度 Gemini API 進行交叉比對，主動扮演「反方挑戰者」揭露人類當局者迷的專案風險，並透過 90% 的信心指數給出具體且符合邏輯的行動替代方案。',
       image: '/manus-storage/decidenow-results_3d272a1a.png',
       alt: 'DecideNow Results Display',
     },
     {
       id: '4',
-      title: '歷史記錄',
-      description: '決策歷史日誌與覆盤機制，支持對比與回顧',
+      title: 'ICE 決策沙盒',
+      description: '引入敏捷開發標準的 ICE 模型，利用 useMemo 即時運算綜合決策分數，並自動生成最高風險警示與 Plan B 應變計畫，將定性直覺收斂為立體的科學實踐方案。',
       image: null,
       alt: 'DecideNow History Records',
     },

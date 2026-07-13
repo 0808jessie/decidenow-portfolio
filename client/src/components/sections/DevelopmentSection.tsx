@@ -137,13 +137,15 @@ export default function DevelopmentSection() {
           ].map((benefit, index) => (
             <div
               key={index}
-              className="text-center space-y-3 p-4 rounded-lg bg-card hover:bg-primary/5 transition-colors"
+              className="space-y-3 p-4 rounded-lg bg-card hover:bg-primary/5 transition-colors"
               style={{
                 animation: `fadeInUp 0.6s ease-out ${0.8 + index * 0.1}s both`,
               }}
             >
-              <div className="text-3xl">{benefit.icon}</div>
-              <h4 className="font-serif font-semibold text-foreground">{benefit.title}</h4>
+              <div className="flex items-center gap-2">
+                <div className="text-2xl flex-shrink-0">{benefit.icon}</div>
+                <h4 className="font-serif font-semibold text-foreground">{benefit.title}</h4>
+              </div>
               <p className="text-sm text-muted-foreground">{benefit.description}</p>
             </div>
           ))}

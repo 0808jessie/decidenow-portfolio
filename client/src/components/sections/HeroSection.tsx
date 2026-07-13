@@ -97,7 +97,7 @@ export default function HeroSection() {
                 {['React', 'TypeScript', 'TailwindCSS', 'Gemini API', 'Lovable'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-card border border-border rounded-md text-sm font-mono text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-sm"
+                    className="px-4 py-2 bg-primary/15 border border-primary/30 rounded-md text-sm font-mono text-foreground hover:bg-primary/25 transition-all duration-300 hover:shadow-sm"
                   >
                     {tech}
                   </span>
