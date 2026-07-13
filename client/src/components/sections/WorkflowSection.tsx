@@ -54,8 +54,8 @@ export default function WorkflowSection() {
         </div>
 
         {/* Product Screenshot Area */}
-        <div className="mb-16 rounded-lg overflow-hidden border border-border shadow-sm bg-background p-8">
-          <div className="aspect-video bg-gradient-to-br from-primary/6 to-primary/10 rounded-lg flex items-center justify-center">
+        <div className="mb-16 rounded-lg overflow-hidden border border-border shadow-sm bg-background p-8" style={{height: '579px', width: '1463px'}}>
+          <div className="aspect-video bg-gradient-to-br from-primary/6 to-primary/10 rounded-lg flex items-center justify-center" style={{height: '514px', width: '1398px'}}>
             <div className="text-center space-y-2">
               <p className="text-sm text-muted-foreground">產品首頁截圖</p>
               <p className="text-xs text-muted-foreground">DecideNow 決策系統界面</p>

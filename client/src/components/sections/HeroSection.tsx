@@ -1,21 +1,36 @@
 /**
  * Hero Section - Project Overview
- * Design: Japanese Minimalism with warm beige background
- * Layout: Two-column - left brand identity, right core tagline
+ * Design: Japanese Minimalism with modern gradient background
+ * Layout: Two-column - left brand identity, right core tagline with tech stack
  */
 
 export default function HeroSection() {
   return (
     <section className="relative py-16 md:py-24 bg-background overflow-hidden">
-      {/* Background decoration */}
-      <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: 'url(/manus-storage/decidenow-hero-bg_f308d93e.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      />
+      {/* Modern gradient background */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: 'url(/manus-storage/decidenow-hero-bg_f308d93e.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        {/* Modern gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+        {/* Subtle mesh pattern */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `
+              linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.1) 49%, rgba(255,255,255,0.1) 51%, transparent 52%),
+              linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.1) 49%, rgba(255,255,255,0.1) 51%, transparent 52%)
+            `,
+            backgroundSize: '60px 60px',
+          }}
+        />
+      </div>
 
       <div className="container relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -43,29 +58,32 @@ export default function HeroSection() {
                 從模糊直覺到步驟化科學量化
               </p>
             </div>
-
-            {/* Tech Stack Tags */}
-            <div className="flex flex-wrap gap-3 pt-2" style={{paddingRight: '59px', paddingTop: '19px'}}>
-              {['React', 'TypeScript', 'TailwindCSS', 'Gemini API', 'Lovable'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 bg-card border border-border rounded-md text-sm font-mono text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
           </div>
 
-          {/* Right: Core Tagline */}
+          {/* Right: Core Tagline + Tech Stack */}
           <div className="flex items-start pt-2">
-            <div className="bg-card border border-border rounded-lg p-6 w-full" style={{marginTop: '144px'}}>
-              <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
-                核心理念
-              </p>
-              <p className="text-lg font-serif font-semibold text-foreground leading-relaxed">
-                「我不只是在使用 AI，我是在設計 AI 參與人類決策的工作流。」
-              </p>
+            <div className="w-full space-y-4">
+              {/* Core Tagline - Aligned with subtitle */}
+              <div className="bg-card border border-border rounded-lg p-6 w-full">
+                <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
+                  核心理念
+                </p>
+                <p className="text-lg font-serif font-semibold text-foreground leading-relaxed">
+                  「我不只是在使用 AI，我是在設計 AI 參與人類決策的工作流。」
+                </p>
+              </div>
+
+              {/* Tech Stack Tags - Below Core Tagline */}
+              <div className="flex flex-wrap gap-3">
+                {['React', 'TypeScript', 'TailwindCSS', 'Gemini API', 'Lovable'].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 bg-card border border-border rounded-md text-sm font-mono text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           </div>
         </div>

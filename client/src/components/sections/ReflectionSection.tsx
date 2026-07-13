@@ -9,26 +9,26 @@ export default function ReflectionSection() {
     {
       title: '從基礎到可用的跨越',
       description: '在此專案前，我只有在大學學過最基本的程式基礎。但在這個 AI 時代，透過正確的工具鏈調度與協作，我竟然能在一週內獨立打造出一套完整、可實際投入使用的 AI 引導式決策系統。這種從 0 到 1 的落地過程，帶給我巨大的成就感。',
-      icon: '🚀',
+      icon: '▲',
       color: 'from-orange-50 to-amber-50',
     },
     {
       title: '思維的終極轉型',
       description: '這個專案徹底改變了我對技術的認知。工程師的價值不再受限於程式語法的熟練度，而是體現在「對問題的深度剖析能力、系統架構的整體規劃、以及如何設計 AI 穩定參與人類工作流的代理權限」。',
-      icon: '🧠',
+      icon: '◆',
       color: 'from-slate-50 to-gray-50',
     },
     {
       title: 'AI 協作新範式',
       description: '不是替代，而是協作。我學會了如何讓 AI 成為我的思維延伸，而不是簡單的代碼生成工具。這種協作方式讓我能夠專注於系統設計，而把繁瑣的細節交給 AI。',
-      icon: '🤝',
-      color: 'from-stone-50 to-yellow-50',
+      icon: '◆',
+      color: 'from-slate-50 to-gray-50',
     },
     {
       title: '持續進化的起點',
       description: '這不是終點，而是起點。每一個決策、每一行代碼、每一次迭代，都是我成長的證明。在 Vibe Coding 時代，我已經找到了屬於自己的工程師身份——不是被工具定義，而是用工具來實現想法。',
-      icon: '✨',
-      color: 'from-rose-50 to-pink-50',
+      icon: '▲',
+      color: 'from-orange-50 to-amber-50',
     },
   ];
 
@@ -75,14 +75,14 @@ export default function ReflectionSection() {
             {reflections.slice(0, 2).map((reflection, index) => (
               <div
                 key={index}
-                className={`bg-gradient-to-br ${reflection.color} border border-primary/10 rounded-lg p-8 hover:shadow-md transition-shadow duration-300`}
+                className={`bg-gradient-to-br ${reflection.color} border border-primary/10 rounded-lg p-8 hover:shadow-md hover:bg-opacity-80 transition-all duration-300`}
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${index * 0.1}s both`,
                 }}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl flex-shrink-0">{reflection.icon}</div>
-                  <h3 className="text-xl font-serif font-bold text-foreground" style={{paddingTop: '10px'}}>
+                  <div className="text-4xl font-bold flex-shrink-0 text-primary">{reflection.icon}</div>
+                  <h3 className="text-xl font-serif font-bold text-foreground pt-2">
                     {reflection.title}
                   </h3>
                 </div>
@@ -98,14 +98,14 @@ export default function ReflectionSection() {
             {reflections.slice(2, 4).map((reflection, index) => (
               <div
                 key={index + 2}
-                className={`bg-gradient-to-br ${reflection.color} border border-primary/10 rounded-lg p-8 hover:shadow-md transition-shadow duration-300`}
+                className={`bg-gradient-to-br ${reflection.color} border border-primary/10 rounded-lg p-8 hover:shadow-md hover:bg-opacity-80 transition-all duration-300`}
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${(index + 2) * 0.1}s both`,
                 }}
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="text-4xl flex-shrink-0">{reflection.icon}</div>
-                  <h3 className="text-xl font-serif font-bold text-foreground" style={{paddingTop: '10px'}}>
+                  <div className="text-4xl font-bold flex-shrink-0 text-primary">{reflection.icon}</div>
+                  <h3 className="text-xl font-serif font-bold text-foreground pt-2">
                     {reflection.title}
                   </h3>
                 </div>
@@ -118,7 +118,7 @@ export default function ReflectionSection() {
         </div>
 
         {/* Key Insights Grid */}
-        <div className="bg-gradient-to-r from-primary/5 to-primary/8 border border-primary/20 rounded-lg p-8 mb-16">
+        <div className="mb-16">
           <h3 className="text-xl font-serif font-bold text-foreground mb-8">
             核心洞察
           </h3>
@@ -126,12 +126,12 @@ export default function ReflectionSection() {
             {keyInsights.map((insight, index) => (
               <div
                 key={index}
-                className="space-y-3 p-4 rounded-lg hover:bg-background/50 transition-colors duration-200"
+                className="bg-card border border-border rounded-lg p-4 hover:bg-primary/5 transition-colors duration-200"
                 style={{
                   animation: `fadeInUp 0.6s ease-out ${0.6 + index * 0.1}s both`,
                 }}
               >
-                <h4 className="font-serif font-bold text-foreground text-sm">
+                <h4 className="font-serif font-bold text-foreground text-sm mb-2">
                   {insight.title}
                 </h4>
                 <p className="text-xs leading-relaxed text-muted-foreground">
