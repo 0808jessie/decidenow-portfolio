@@ -82,11 +82,11 @@ export default function ReflectionSection() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="text-4xl font-bold flex-shrink-0 text-primary" style={{fontSize: '30px'}}>{reflection.icon}</div>
-                  <h3 className="text-xl font-serif font-bold text-foreground pt-2">
+                  <h3 className="font-serif font-bold text-foreground pt-2" style={{fontSize: '18px'}}>
                     {reflection.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
+                <p className="leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                   {reflection.description}
                 </p>
               </div>
@@ -105,11 +105,11 @@ export default function ReflectionSection() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="text-4xl font-bold flex-shrink-0 text-primary" style={{fontSize: '30px'}}>{reflection.icon}</div>
-                  <h3 className="text-xl font-serif font-bold text-foreground pt-2">
+                  <h3 className="font-serif font-bold text-foreground pt-2" style={{fontSize: '18px'}}>
                     {reflection.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
+                <p className="leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                   {reflection.description}
                 </p>
               </div>

@@ -79,11 +79,11 @@ export default function DevelopmentSection() {
                   <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-xs shadow-sm flex-shrink-0" style={{fontSize: '20px'}}>
                     {stage.id}
                   </div>
-                  <h3 className="text-lg font-serif font-bold text-foreground">
+                  <h3 className="font-serif font-bold text-foreground" style={{fontSize: '18px'}}>
                     {stage.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground mb-3">
+                <p className="leading-relaxed text-muted-foreground mb-3" style={{fontSize: '16px'}}>
                   {stage.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

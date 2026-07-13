@@ -75,20 +75,18 @@ export default function TechHighlightsSection() {
 
               {/* Content Overlay */}
               <div className="relative bg-card/98 backdrop-blur-md p-8 h-full flex flex-col justify-between">
-                {/* Top Section with Icon & Highlight */}
+                {/* Top Section with Icon & Title */}
                 <div className="space-y-4">
-                  <div className="flex items-start justify-between">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                  <div className="flex items-start gap-3">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-2xl">{highlight.icon}</span>
                     </div>
-
+                    <h3 className="font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300" style={{fontSize: '18px'}}>
+                      {highlight.title}
+                    </h3>
                   </div>
 
-                  <h3 className="text-lg font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300">
-                    {highlight.title}
-                  </h3>
-
-                  <p className="text-sm leading-relaxed text-muted-foreground">
+                  <p className="leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                     {highlight.description}
                   </p>
                 </div>
