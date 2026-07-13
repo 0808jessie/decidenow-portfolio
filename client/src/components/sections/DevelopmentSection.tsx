@@ -27,6 +27,7 @@ const developmentStages = [
     description: '在本機端使用 VS Code 實踐 Vibe Coding 的最高指導原則——將精力專注於系統架構與邏輯拆解，把編碼細節交給 AI。',
     tools: ['VS Code', 'Vibe Coding'],
     screenshotLabel: 'VS Code 開發環境',
+    image: '/manus-storage/Snipaste_2026-07-13_19-49-56_0e735afb.png',
   },
   {
     id: 4,
