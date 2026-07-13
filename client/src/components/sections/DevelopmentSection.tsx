@@ -70,7 +70,7 @@ export default function DevelopmentSection() {
               {/* Screenshot Area - Top */}
               <div className="mb-6 rounded-lg overflow-hidden border border-border shadow-sm bg-card order-first">
                 {stage.image ? (
-                  <img src={stage.image} alt={stage.screenshotLabel} className="w-full h-auto" />
+                  <img src={stage.image} alt={stage.screenshotLabel} className="w-full h-auto" style={{height: stage.id === 4 ? '377px' : 'auto', objectFit: 'cover'}} />
                 ) : (
                   <div className="aspect-video bg-gradient-to-br from-primary/8 to-primary/12 rounded-lg flex items-center justify-center">
                     <div className="text-center space-y-2">
@@ -119,45 +119,7 @@ export default function DevelopmentSection() {
           </p>
         </div>
 
-        {/* Tool Orchestration Benefits */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {[
-            {
-              title: '快速驗證',
-              icon: '⚡',
-              description: 'Lovable 平台快速原型',
-            },
-            {
-              title: '版本管理',
-              icon: '📦',
-              description: 'GitHub 完整的代碼追蹤',
-            },
-            {
-              title: '本地開發',
-              icon: '💻',
-              description: 'VS Code 專業開發環境',
-            },
-            {
-              title: '智能協作',
-              icon: '🤖',
-              description: '多模型聯動品質把關',
-            },
-          ].map((benefit, index) => (
-            <div
-              key={index}
-              className="space-y-3 p-4 rounded-lg bg-card hover:bg-primary/5 transition-colors"
-              style={{
-                animation: `fadeInUp 0.6s ease-out ${0.8 + index * 0.1}s both`,
-              }}
-            >
-              <div className="flex items-center gap-2">
-                <div className="text-2xl flex-shrink-0">{benefit.icon}</div>
-                <h4 className="font-serif font-semibold text-foreground">{benefit.title}</h4>
-              </div>
-              <p className="text-sm text-muted-foreground">{benefit.description}</p>
-            </div>
-          ))}
-        </div>
+
       </div>
 
       <style>{`
