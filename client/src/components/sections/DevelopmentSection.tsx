@@ -84,7 +84,7 @@ export default function DevelopmentSection() {
               {/* Content Card - Bottom */}
               <div className="card-minimal">
                 <div className="flex items-center gap-4 mb-3">
-                  <div className="text-primary font-bold flex-shrink-0 pt-1" style={{fontSize: '30px'}}>
+                  <div className="text-primary font-bold flex-shrink-0" style={{fontSize: '30px', paddingTop: '5px', height: '28px', display: 'flex', alignItems: 'center'}}>
                     {stage.id}
                   </div>
                   <h3 className="font-serif font-bold text-foreground" style={{fontSize: '18px'}}>
