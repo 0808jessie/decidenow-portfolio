@@ -15,10 +15,11 @@ const developmentStages = [
   },
   {
     id: 2,
-    title: 'GitHub 雙向鏈接',
+    title: 'GitHub 雙向連接',
     description: '原型確認後，直接將 Lovable 專案連接至 GitHub 儲存庫，並克隆至本機端開發環境。',
     tools: ['GitHub', 'Git Clone'],
     screenshotLabel: 'GitHub 儲存庫',
+    image: '/manus-storage/Snipaste_2026-07-13_20-19-30_e7deffa3.png',
   },
   {
     id: 3,

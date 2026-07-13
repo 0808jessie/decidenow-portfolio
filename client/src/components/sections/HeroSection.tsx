@@ -87,8 +87,8 @@ export default function HeroSection() {
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
                   核心理念
                 </p>
-                <p className="text-lg font-serif font-semibold text-foreground leading-relaxed">
-                  「我不只是在使用 AI，我是在設計 AI 參與人類決策的工作流。」
+                <p className="text-lg font-serif font-semibold text-foreground leading-relaxed" style={{color: '#000000'}}>
+                  「重新定義人機協作：將 AI 從 對話式工具 升級為 高質量決策的流程代理人 (Workflow Agent)。」
                 </p>
               </div>
 

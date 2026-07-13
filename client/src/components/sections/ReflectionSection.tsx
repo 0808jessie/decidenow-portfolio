@@ -145,7 +145,7 @@ export default function ReflectionSection() {
         {/* Call to Action */}
         <div className="text-center space-y-6 p-8 bg-gradient-to-r from-primary/8 to-primary/12 border border-primary/20 rounded-lg">
           <p className="text-lg font-serif font-semibold text-foreground leading-relaxed max-w-2xl mx-auto">
-            「這是我在 Vibe Coding 時代交出的第一份完美答卷——不是完美無缺，而是完美地詮釋了現代工程師應該具備的素質。」
+            「這是我在 Vibe Coding 時代交出的第一份答卷——不是完美無缺，而是完美地詮釋了現代工程師/設計師應該具備的素質。」
           </p>
           <a
             href="https://0808jessie.github.io/"
