@@ -77,8 +77,8 @@ export default function TechHighlightsSection() {
               <div className="relative bg-card/98 backdrop-blur-md p-8 h-full flex flex-col justify-between">
                 {/* Top Section with Icon & Title */}
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center flex-shrink-0 font-serif font-bold" style={{fontSize: '18px'}}>
+                  <div className="flex flex-col items-center gap-3 text-center">
+                    <div className="text-primary font-serif font-bold" style={{fontSize: '24px'}}>
                       {highlight.icon}
                     </div>
                     <h3 className="font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300" style={{fontSize: '18px'}}>

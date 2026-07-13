@@ -82,9 +82,9 @@ export default function ProductGallerySection() {
 
               {/* Content */}
               <div className="p-6 space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="text-sm font-serif font-bold text-primary" style={{fontSize: '20px'}}>{page.id}</span>
+                <div className="flex flex-col items-center gap-3 text-center">
+                  <div className="text-primary font-serif font-bold" style={{fontSize: '24px'}}>
+                    {page.id}
                   </div>
                   <h3 className="font-serif font-bold text-foreground" style={{fontSize: '18px'}}>
                     {page.title}
