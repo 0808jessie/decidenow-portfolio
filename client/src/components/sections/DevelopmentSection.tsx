@@ -11,6 +11,7 @@ const developmentStages = [
     description: '在開發初期，完全使用 Lovable 平台，以自然語言快速提煉並驗證初版的 UI/UX 畫面與基礎動態。',
     tools: ['Lovable', 'Natural Language'],
     screenshotLabel: 'Lovable 平台界面',
+    image: '/manus-storage/Snipaste_2026-07-13_19-46-57_5d840d9c.png',
   },
   {
     id: 2,
@@ -64,13 +65,17 @@ export default function DevelopmentSection() {
               }}
             >
               {/* Screenshot Area - Top */}
-              <div className="mb-6 rounded-lg overflow-hidden border border-border shadow-sm bg-card p-6 order-first">
-                <div className="aspect-video bg-gradient-to-br from-primary/8 to-primary/12 rounded-lg flex items-center justify-center">
-                  <div className="text-center space-y-2">
-                    <p className="text-sm text-muted-foreground font-medium">{stage.screenshotLabel}</p>
-                    <p className="text-xs text-muted-foreground">工具截圖展示</p>
+              <div className="mb-6 rounded-lg overflow-hidden border border-border shadow-sm bg-card order-first">
+                {stage.image ? (
+                  <img src={stage.image} alt={stage.screenshotLabel} className="w-full h-auto" />
+                ) : (
+                  <div className="aspect-video bg-gradient-to-br from-primary/8 to-primary/12 rounded-lg flex items-center justify-center">
+                    <div className="text-center space-y-2">
+                      <p className="text-sm text-muted-foreground font-medium">{stage.screenshotLabel}</p>
+                      <p className="text-xs text-muted-foreground">工具截圖展示</p>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
 
               {/* Content Card - Bottom */}
