@@ -11,7 +11,7 @@ const techHighlights = [
     description: '在前端利用 useState 結合 useMemo，針對用戶隨時調整的數十個動態加權標籤，進行流暢的即時矩陣運算，保證高頻拖曳滑桿時 UI 響應無延遲。',
     tech: ['React Hooks', 'useMemo', 'Performance'],
     bgImage: '/manus-storage/tech-card-bg-1_50b26e84.png',
-    icon: '⚡',
+    icon: '1',
     highlight: '0ms 延遲',
   },
   {
@@ -20,7 +20,7 @@ const techHighlights = [
     description: '利用 Google AI Studio 平台串接 Gemini API 進行模型調度。設計嚴格的系統級提示詞限制，強制模型輸出純 JSON 格式，並在前端編寫強健的轉型與正則提取邏輯，徹底預防 AI 幻覺導致的解析崩潰。',
     tech: ['Gemini API', 'JSON Schema', 'Error Handling'],
     bgImage: '/manus-storage/tech-card-bg-2_9132a49b.png',
-    icon: '🤖',
+    icon: '2',
     highlight: '99.9% 可用性',
   },
   {
@@ -29,7 +29,7 @@ const techHighlights = [
     description: '整合 LocalStorage 實現決策歷史日誌。不僅保留當下的數據，更為團隊建立覆盤機制，以便上線後對比當時 AI 警告的風險是否應驗。',
     tech: ['LocalStorage', 'Data Persistence', 'Audit Log'],
     bgImage: '/manus-storage/tech-card-bg-3_3d39b4e3.png',
-    icon: '📊',
+    icon: '3',
     highlight: '完整審計',
   },
 ];
@@ -78,8 +78,8 @@ export default function TechHighlightsSection() {
                 {/* Top Section with Icon & Title */}
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
-                      <span className="text-2xl">{highlight.icon}</span>
+                    <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground border border-primary flex items-center justify-center flex-shrink-0 font-serif font-bold" style={{fontSize: '18px'}}>
+                      {highlight.icon}
                     </div>
                     <h3 className="font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300" style={{fontSize: '18px'}}>
                       {highlight.title}

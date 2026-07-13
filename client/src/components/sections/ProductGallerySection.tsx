@@ -98,14 +98,25 @@ export default function ProductGallerySection() {
           ))}
         </div>
 
-        {/* Gallery Info */}
-        <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/8 border border-primary/20 rounded-lg text-center space-y-3">
-          <p className="text-sm font-medium text-foreground" style={{fontSize: '18px', fontWeight: '600'}}>
-            完整的用戶旅程
-          </p>
-          <p className="text-xs text-muted-foreground max-w-2xl mx-auto" style={{fontSize: '16px'}}>
-            從初次接觸到決策完成，DecideNow 提供直觀的界面設計與流暢的用戶體驗，讓複雜的決策過程變得簡單易懂。
-          </p>
+        {/* Gallery Info with CTA */}
+        <div className="p-8 bg-gradient-to-r from-primary/5 to-primary/8 border border-primary/20 rounded-lg text-center space-y-6">
+          <div className="space-y-3">
+            <p className="text-sm font-medium text-foreground" style={{fontSize: '18px', fontWeight: '600'}}>
+              完整的用戶旅程
+            </p>
+            <p className="text-xs text-muted-foreground max-w-2xl mx-auto" style={{fontSize: '16px'}}>
+              從初次接觸到決策完成，DecideNow 提供直觀的界面設計與流暢的用戶體驗，讓複雜的決策過程變得簡單易懂。
+            </p>
+          </div>
+          <a
+            href="https://0808jessie.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-8 py-3 bg-primary text-primary-foreground font-serif font-bold rounded-lg hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+            style={{fontSize: '16px'}}
+          >
+            立即體驗
+          </a>
         </div>
       </div>
 
