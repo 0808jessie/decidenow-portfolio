@@ -87,7 +87,7 @@ export default function DevelopmentSection() {
                   <div className="text-primary font-bold flex-shrink-0" style={{fontSize: '30px', paddingTop: '5px', height: '28px', display: 'flex', alignItems: 'center'}}>
                     {stage.id}
                   </div>
-                  <h3 className="font-serif font-bold text-foreground" style={{fontSize: '18px'}}>
+                  <h3 className="font-serif font-bold text-foreground" style={{fontSize: '18px', paddingTop: '5px', height: '28px', display: 'flex', alignItems: 'center'}}>
                     {stage.title}
                   </h3>
                 </div>

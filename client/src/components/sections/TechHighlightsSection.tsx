@@ -81,7 +81,7 @@ export default function TechHighlightsSection() {
                     <div className="text-primary font-bold flex-shrink-0" style={{fontSize: '30px', paddingTop: '5px', height: '28px', display: 'flex', alignItems: 'center'}}>
                       {highlight.icon}
                     </div>
-                    <h3 className="font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300" style={{fontSize: '18px'}}>
+                    <h3 className="font-serif font-bold text-foreground leading-tight group-hover:text-primary transition-colors duration-300" style={{fontSize: '18px', paddingTop: '5px', height: '28px', display: 'flex', alignItems: 'center'}}>
                       {highlight.title}
                     </h3>
                   </div>
