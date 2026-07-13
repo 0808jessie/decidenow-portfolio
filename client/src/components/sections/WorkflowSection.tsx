@@ -9,7 +9,7 @@ const workflowSteps = [
     id: 1,
     title: '定義問題',
     subtitle: 'Define',
-    description: '使用者輸入一句日常糾結，底層應用 PTCF 提示詞框架，精準鎖定決策的核心邊界與上下文背景。',
+    description: '使用者輸入一句日常糾結，底層應用 PTCF 提示詞框架，精準鎖定決策核心邊界與上下文背景。',
     icon: '①',
   },
   {
@@ -23,14 +23,14 @@ const workflowSteps = [
     id: 3,
     title: '評估風險',
     subtitle: 'Evaluate',
-    description: '引入 ICE 模型量化加權，由 AI 擔任反方挑戰者進行交叉推理，主動揭露人類當局者迷的盲點與隱性風險。',
+    description: '引入 ICE 模型量化加權，由 AI 擔任反方挑戰者進行交叉推理，揭露當局者迷的盲點與隱性風險。',
     icon: '③',
   },
   {
     id: 4,
     title: '給出建議',
     subtitle: 'Advise',
-    description: '結合沙盒反饋與最大風險評估，強制輸出具備行動可行性的應變方案，完成複雜決策閉環。',
+    description: '結合沙盒回饋與最大風險評估，輸出具備行動可行性的應變方案，完成複雜決策閉環。',
     icon: '④',
   },
 ];

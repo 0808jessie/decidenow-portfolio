@@ -84,14 +84,14 @@ export default function DevelopmentSection() {
               {/* Content Card - Bottom */}
               <div className="card-minimal">
                 <div className="flex items-start gap-3 mb-3">
-                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-xs shadow-sm flex-shrink-0" style={{fontSize: '20px'}}>
+                  <div className="w-8 h-8 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-xs shadow-sm flex-shrink-0" style={{fontSize: '25px', textAlign: 'center'}}>
                     {stage.id}
                   </div>
                   <h3 className="font-serif font-bold text-foreground" style={{fontSize: '18px'}}>
                     {stage.title}
                   </h3>
                 </div>
-                <p className="leading-relaxed text-muted-foreground mb-3" style={{fontSize: '16px'}}>
+                <p className="leading-relaxed text-muted-foreground mb-3" style={{fontSize: '16px', height: '52px'}}>
                   {stage.description}
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -114,7 +114,7 @@ export default function DevelopmentSection() {
           <p className="text-center text-lg font-serif font-semibold text-foreground leading-relaxed">
             「將精力專注於系統架構與邏輯拆解，把編碼細節與邊界除錯交給 AI」
           </p>
-          <p className="text-center text-sm text-muted-foreground mt-4">
+          <p className="text-center text-sm text-muted-foreground mt-4" style={{fontSize: '16px'}}>
             Vibe Coding 的核心指導原則
           </p>
         </div>
