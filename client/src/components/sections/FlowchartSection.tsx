@@ -58,9 +58,9 @@ export default function FlowchartSection() {
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="text-2xl flex-shrink-0">{item.icon}</div>
-                <h4 className="font-serif font-bold text-foreground">{item.title}</h4>
+                <h4 className="font-serif font-bold text-foreground" style={{fontSize: '18px'}}>{item.title}</h4>
               </div>
-              <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              <p className="text-sm text-muted-foreground leading-relaxed" style={{fontSize: '16px'}}>{item.description}</p>
             </div>
           ))}
         </div>

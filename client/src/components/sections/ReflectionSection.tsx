@@ -119,8 +119,8 @@ export default function ReflectionSection() {
 
         {/* Key Insights Grid */}
         <div className="mb-16">
-          <h3 className="text-xl font-serif font-bold text-foreground mb-8">
-            核心洞察
+          <h3 className="text-xl font-serif font-bold text-foreground mb-8" style={{textAlign: 'center'}}>
+            －　核心洞察　－
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {keyInsights.map((insight, index) => (

@@ -90,7 +90,7 @@ export default function ProductGallerySection() {
                     {page.title}
                   </h3>
                 </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-sm leading-relaxed text-muted-foreground" style={{fontSize: '16px'}}>
                   {page.description}
                 </p>
               </div>
