@@ -32,9 +32,10 @@ const developmentStages = [
   {
     id: 4,
     title: '雙模型協作',
-    description: '在遇到複雜邏輯或排版異常時，動態調度 Gemini 與 Claude 3.5 雙模型進行品質把關。',
-    tools: ['Gemini', 'Claude 3.5'],
+    description: '在遇到複雜邏輯或排版異常時，使用 Gemini 與 Claude 雙模型進行品質把關。',
+    tools: ['Gemini', 'Claude'],
     screenshotLabel: '模型協作流程',
+    image: '/manus-storage/Snipaste_2026-07-14_01-34-08_3eb55fa4.png',
   },
 ];
 
