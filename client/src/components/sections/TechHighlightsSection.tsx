@@ -7,8 +7,8 @@
 const techHighlights = [
   {
     id: 1,
-    title: '矩陣即時運算與狀態管理',
-    description: '在前端利用 useState 結合 useMemo，針對用戶隨時調整的數十個動態加權標籤，進行流暢的即時矩陣運算，保證高頻拖曳滑桿時 UI 響應無延遲。',
+    title: '即時狀態優化（AI 提示詞導向）',
+    description: '為了確保用戶拖曳滑桿時介面不卡頓，我引導 AI 在前端採用 useMemo 來處理數十個動態標籤的即時矩陣運算，成功打造零延遲的流暢互動。',
     tech: ['React Hooks', 'useMemo', 'Performance'],
     bgImage: '/manus-storage/tech-card-bg-1_50b26e84.png',
     icon: '1',
@@ -16,17 +16,17 @@ const techHighlights = [
   },
   {
     id: 2,
-    title: 'Google AI Studio API 高可用串接',
-    description: '利用 Google AI Studio 平台串接 Gemini API 進行模型調度。設計嚴格的系統級提示詞限制，強制模型輸出純 JSON 格式，並在前端編寫強健的轉型與正則提取邏輯，徹底預防 AI 幻覺導致的解析崩潰。',
-    tech: ['Gemini API', 'JSON Schema', 'Error Handling'],
+    title: '結構化資料防錯（雙模型協作）',
+    description: '為了解決 AI 幻覺導致網頁解析崩潰的問題，我指揮 Gemini 建立嚴格的 JSON 提示詞，並調用 Claude 3.5 協助編寫前端防錯邏輯，確保系統高容錯率。',
+    tech: ['Gemini API', 'Claude 3.5', 'Error Handling'],
     bgImage: '/manus-storage/tech-card-bg-2_9132a49b.png',
     icon: '2',
     highlight: '99.9% 可用性',
   },
   {
     id: 3,
-    title: '持久化與覆盤機制',
-    description: '整合 LocalStorage 實現決策歷史日誌。不僅保留當下的數據，更為團隊建立覆盤機制，以便上線後對比當時 AI 警告的風險是否應驗。',
+    title: '資料持久化（Lovable 原型擴充）',
+    description: '我在 Lovable 雛形基礎上，要求 AI 整合 LocalStorage 來儲存決策歷史。這讓用戶能隨時查閱日誌，實現「回頭覆盤 AI 預警」的產品閉環。',
     tech: ['LocalStorage', 'Data Persistence', 'Audit Log'],
     bgImage: '/manus-storage/tech-card-bg-3_3d39b4e3.png',
     icon: '3',

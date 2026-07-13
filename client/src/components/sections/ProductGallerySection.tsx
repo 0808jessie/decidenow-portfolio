@@ -7,13 +7,6 @@
 export default function ProductGallerySection() {
   const productPages = [
     {
-      id: '1',
-      title: '首頁',
-      description: '決策系統的入口，展示核心功能與價值主張。用戶可在此輸入決策問題，系統將引導完成四階決策流程。',
-      image: '/manus-storage/decidenow-homepage_c5a73155.png',
-      alt: 'DecideNow Homepage',
-    },
-    {
       id: '2',
       title: '指標加權與標籤池',
       description: '系統透過 useState 管理即時狀態，將 AI 提取的利弊標籤與手動因子轉化為加權滑桿，讓使用者能直覺校準不同維度對最終決策的影響力。',
