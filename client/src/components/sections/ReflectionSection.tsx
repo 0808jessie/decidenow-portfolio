@@ -9,25 +9,25 @@ export default function ReflectionSection() {
     {
       title: '從基礎到可用的跨越',
       description: '在此專案前，我只有在大學學過最基本的程式基礎。但在這個 AI 時代，透過正確的工具鏈調度與協作，我竟然能在一週內獨立打造出一套完整、可實際投入使用的 AI 引導式決策系統。這種從 0 到 1 的落地過程，帶給我巨大的成就感。',
-      icon: '▲',
+      icon: '1',
       color: 'from-orange-50 to-amber-50',
     },
     {
       title: '思維的終極轉型',
       description: '這個專案徹底改變了我對技術的認知。工程師的價值不再受限於程式語法的熟練度，而是體現在「對問題的深度剖析能力、系統架構的整體規劃、以及如何設計 AI 穩定參與人類工作流的代理權限」。',
-      icon: '◆',
+      icon: '2',
       color: 'from-slate-50 to-gray-50',
     },
     {
       title: 'AI 協作新範式',
       description: '不是替代，而是協作。我學會了如何讓 AI 成為我的思維延伸，而不是簡單的代碼生成工具。這種協作方式讓我能夠專注於系統設計，而把繁瑣的細節交給 AI。',
-      icon: '◆',
+      icon: '3',
       color: 'from-slate-50 to-gray-50',
     },
     {
       title: '持續進化的起點',
       description: '這不是終點，而是起點。每一個決策、每一行代碼、每一次迭代，都是我成長的證明。在 Vibe Coding 時代，我已經找到了屬於自己的工程師身份——不是被工具定義，而是用工具來實現想法。',
-      icon: '▲',
+      icon: '4',
       color: 'from-orange-50 to-amber-50',
     },
   ];

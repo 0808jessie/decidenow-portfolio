@@ -7,8 +7,9 @@
 export default function HeroSection() {
   return (
     <section className="relative py-16 md:py-24 bg-background overflow-hidden">
-      {/* Modern gradient background */}
+      {/* Modern gradient background with enhanced design */}
       <div className="absolute inset-0">
+        {/* Base background image */}
         <div
           className="absolute inset-0 opacity-40"
           style={{
@@ -17,17 +18,35 @@ export default function HeroSection() {
             backgroundPosition: 'center',
           }}
         />
-        {/* Modern gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
-        {/* Subtle mesh pattern */}
+        
+        {/* Modern gradient overlay with depth */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/8 via-transparent to-accent/8" />
+        
+        {/* Animated gradient glow */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/15 to-transparent rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/15 to-transparent rounded-full blur-3xl opacity-30" />
+        
+        {/* Modern grid lines */}
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-15"
           style={{
             backgroundImage: `
-              linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.1) 49%, rgba(255,255,255,0.1) 51%, transparent 52%),
-              linear-gradient(-45deg, transparent 48%, rgba(255,255,255,0.1) 49%, rgba(255,255,255,0.1) 51%, transparent 52%)
+              linear-gradient(90deg, transparent 48%, rgba(255,255,255,0.08) 49%, rgba(255,255,255,0.08) 51%, transparent 52%),
+              linear-gradient(0deg, transparent 48%, rgba(255,255,255,0.08) 49%, rgba(255,255,255,0.08) 51%, transparent 52%)
             `,
-            backgroundSize: '60px 60px',
+            backgroundSize: '80px 80px',
+          }}
+        />
+        
+        {/* Diagonal accent lines */}
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `
+              linear-gradient(45deg, transparent 48%, rgba(100,150,200,0.1) 49%, rgba(100,150,200,0.1) 51%, transparent 52%),
+              linear-gradient(-45deg, transparent 48%, rgba(100,150,200,0.1) 49%, rgba(100,150,200,0.1) 51%, transparent 52%)
+            `,
+            backgroundSize: '120px 120px',
           }}
         />
       </div>
@@ -60,11 +79,11 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right: Core Tagline + Tech Stack */}
-          <div className="flex items-start pt-2">
-            <div className="w-full space-y-4">
-              {/* Core Tagline - Aligned with subtitle */}
-              <div className="bg-card border border-border rounded-lg p-6 w-full">
+          {/* Right: Core Tagline + Tech Stack - Aligned with left text */}
+          <div className="flex items-start pt-16">
+            <div className="w-full space-y-6">
+              {/* Core Tagline - Aligned with left subtitle */}
+              <div className="bg-card border border-border rounded-lg p-6 w-full hover:shadow-md transition-shadow duration-300">
                 <p className="text-sm text-muted-foreground uppercase tracking-wide mb-3">
                   核心理念
                 </p>
@@ -78,7 +97,7 @@ export default function HeroSection() {
                 {['React', 'TypeScript', 'TailwindCSS', 'Gemini API', 'Lovable'].map((tech) => (
                   <span
                     key={tech}
-                    className="px-4 py-2 bg-card border border-border rounded-md text-sm font-mono text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
+                    className="px-4 py-2 bg-card border border-border rounded-md text-sm font-mono text-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-sm"
                   >
                     {tech}
                   </span>
