@@ -31,8 +31,8 @@ export default function ProductGallerySection() {
       id: '4',
       title: 'ICE 決策沙盒',
       description: '引入敏捷開發標準的 ICE 模型，利用 useMemo 即時運算綜合決策分數，並自動生成最高風險警示與 Plan B 應變計畫，將定性直覺收斂為立體的科學實踐方案。',
-      image: null,
-      alt: 'DecideNow History Records',
+      image: '/manus-storage/Snipaste_2026-07-13_02-53-11_5c0c103e.png',
+      alt: 'DecideNow ICE Decision Sandbox',
     },
   ];
 
